@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first javascript lesson</title>
+    <script>
+        function changeContent(){
+            document.getElementById('p1').style.fontSize='35px';
+            document.getElementById('bg').style.backgroundColor='blue';
+            document.getElementById('img').src="p1.png";
+            document.getElementById('p1').style.fontFamily='Areal';
+        }
+    </script>
+</head>
+<body id="bg">
+    <p id="p1">welcome to javascript function</p>
+    <img src="view.png" alt="image" width="300px" height="300px" id="img">
+    <button onclick="changeContent()">change</button>
+</body>
+</html>
