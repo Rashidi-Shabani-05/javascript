@@ -6,28 +6,33 @@
     <title>first task</title>
     <script>
         function  sum(){
-             let x=Number(document.getElementById('num1').value);
-             let y=Number(document.getElementById('num2').value);
-             let z1=x+y;
-             document.getElementById('ans').value=z1;
+             let firstValue=Number(document.getElementById('num1').value);
+             let secondValue=Number(document.getElementById('num2').value);
+             let sum=firstValue+secondValue;
+             document.getElementById('ans').value=sum;
         }
-        function different(){
-             let x=Number(document.getElementById('num1').value);
-             let y=Number(document.getElementById('num2').value);
-             let z2=x-y;
-             document.getElementById('ans').value=z2;
+        function difference(){
+             let firstValue=Number(document.getElementById('num1').value);
+             let secondValue=Number(document.getElementById('num2').value);
+             let difference=firstValue-secondValue;
+             document.getElementById('ans').value=difference;
         }
         function multplication(){
-             let x=Number(document.getElementById('num1').value);
-             let y=Number(document.getElementById('num2').value);
-             let z3=x*y;
-             document.getElementById('ans').value=z3;
+             let firstValue=Number(document.getElementById('num1').value);
+             let secondValue=Number(document.getElementById('num2').value);
+             let multiplication=firstValue*secondValue;
+             document.getElementById('ans').value=multiplication;
         } 
         function division(){
-             let x=Number(document.getElementById('num1').value);
-             let y=Number(document.getElementById('num2').value);
-             let z4=x/y;
-             document.getElementById('ans').value=z4;
+             let firstValue=Number(document.getElementById('num1').value);
+             let secondValue=Number(document.getElementById('num2').value);
+             // check for division by zero first
+             if (secondValue === 0 ){
+               document.getElementById('ans').value='Error (undefined)';
+             } else {
+               let division=firstValue/secondValue;
+               document.getElementById('ans').value=division;
+               }
         }
          function reset() {
             document.getElementById('num1').value = '';
@@ -40,10 +45,10 @@
     <input type="number" id="num1"><br><br>
     <input type="number" id="num2"><br><br>
     <button onclick="sum()">+</button>
-    <button onclick="different()">-</button>
+    <button onclick="difference()">-</button>
     <button onclick="multplication()">x</button>
     <button onclick="division()">/</button><br><br>
-    <input type="number" id="ans"><br><br>
+    <input type="text" id="ans"><br><br>
     <button onclick="reset()">reset</button>
 </body>
 </html>
