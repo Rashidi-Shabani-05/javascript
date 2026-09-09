@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>first task</title>
+    <link rel="stylesheet" href="style3.css">
     <script>
         function  sum(){
              let firstValue=Number(document.getElementById('num1').value);
@@ -42,13 +43,16 @@
     </script>
 </head>
 <body>
-    <input type="number" id="num1"><br><br>
-    <input type="number" id="num2"><br><br>
+    <div class="calculate">
+    <h1>calculator</h1>
+    <input type="number" id="num1" placeholder="Enter First Number"><br><br>
+    <input type="number" id="num2" placeholder="Enter Second Number"><br><br>
     <button onclick="sum()">+</button>
     <button onclick="difference()">-</button>
     <button onclick="multplication()">x</button>
     <button onclick="division()">/</button><br><br>
-    <input type="text" id="ans"><br><br>
+    <input type="text" id="ans" placeholder="Answer"><br><br>
     <button onclick="reset()">reset</button>
+    </div>
 </body>
 </html>

@@ -1,0 +1,58 @@
+body{
+    margin-left: 20%;
+    margin-right: 20%;
+    background-image: url(p1.png);
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+.calculate{
+    background-color: rgb(57, 57, 212);
+    background-size: cover;
+    border: 5px solid aqua;
+    border-radius: 10px;
+    width: 400px;
+    height: 80%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+h1{
+    text-transform: uppercase;
+    color: aqua;
+    font-family: 'Times New Roman';
+    font-size: 50px;
+}
+input{
+    background: transparent;
+    border-radius: 5px;
+    border: 2px solid #ff7200;
+    width: 220px;
+    height: auto;
+    padding: 5px;
+} 
+button{
+    background: transparent;
+    border-radius: 5px;
+    border: 2px solid #ff7200;
+    width: 100px;
+    height: auto;
+    padding: 5px;
+    font-size: 30px;
+    font-weight: bolder;
+    color: black;
+    font-family: 'Times New Roman';
+}
+input::placeholder{
+     font-size: 20px;
+    font-weight: bolder;
+    color: #000;
+    font-family: 'Times New Roman';
+    opacity: 1;
+}
+input:hover{
+    background-color: rgb(226, 226, 38);
+}
+button:hover{
+    background-color: rgb(110, 110, 22);
+}
+
