@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="start()">Start</button>
+
+<p id="result"></p>
+
+<script>
+function start(){
+
+    setTimeout(function(){
+        document.getElementById("result").innerHTML = "Time is over";
+    }, 5000);
+
+}
+</script>
+
+
+<div class="num1">
+    <p id="number">0</p>
+
+<button onclick="start()">Start</button>
+
+<script>
+
+let number1 = 0;
+
+function start(){
+
+    setInterval(function(){
+
+        number1++;
+
+        document.getElementById("number").innerHTML = number1;
+
+    }, 1000);
+
+}
+
+</script>
+</div>
+
+<div class="num2">
+    <p id="time">0</p>
+
+<button onclick="start()">Start</button>
+<button onclick="stop()">Stop</button>
+
+<script>
+
+let seconds = 0;
+let timer;
+
+function start(){
+
+    timer = setInterval(function(){
+
+        seconds++;
+
+        document.getElementById("time").innerHTML = seconds;
+
+    }, 1000);
+
+}
+
+function stop(){
+
+    clearInterval(timer);
+
+}
+
+</script>
+</div>
+
+<div class="num3">
+    <p id="count">10</p>
+
+<button onclick="start()">Start</button>
+
+<script>
+
+let number = 10;
+
+function start(){
+
+    timer = setInterval(function(){
+
+        document.getElementById("count").innerHTML = number;
+
+        number--;
+
+        if(number < 0){
+
+            clearInterval(timer);
+
+            document.getElementById("count").innerHTML = "Time Up!";
+
+        }
+
+    }, 1000);
+
+}
+
+</script>
+</div>
+
+<div class="num4">
+    <button onclick="start()">Start</button>
+<button onclick="cancel()">Cancel</button>
+
+<p id="result"></p>
+
+<script>
+
+
+function start(){
+
+    timer = setTimeout(function(){
+
+        document.getElementById("result").innerHTML =
+        "Time finished";
+
+    }, 10000);
+
+}
+
+function cancel(){
+
+    clearTimeout(timer);
+
+}
+
+</script>
+</div>
+</body>
+</html>

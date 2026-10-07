@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>second lesson</title>
+</head>
+<body>
+    <h1>Check if you allow to drive</h1>
+    <input type="number" name="num1" id="enter" placeholder="Enter your Age">
+    <br><br>
+    <button type="submit" onclick="check()">Check</button>
+    <p id="result"></p>
+    <script>
+        function check(){
+        let age=Number(document.getElementById('enter').value);
+        if(age>=18){
+            document.getElementById('result').innerHTML="You are allowed to Drive"
+        } else{
+            document.getElementById('result').innerHTML="You are not allowed to drive"
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task version 1</title>
+    <link rel="stylesheet" href="styletv1.css">
+    <script>
+        function display(number){
+            document.getElementById('ansr').value += number;
+        }
+        function calculate(){
+            let epress=document.getElementById('ansr').value;
+            let ans = eval(epress);  
+            document.getElementById('ansr').value = ans;
+        }
+        function reset(c){
+            document.getElementById('ansr').value = c
+        }
+        function displayminus(){ 
+            let screen=document.getElementById('ansr');
+            screen.value = screen.value.slice(0, -1);
+        }
+    </script>
+</head>
+<body>
+    <div class="contaner">
+        <input type="text" name="number" id="ansr" placeholder="0">
+        <br>
+        <button type="reset" onclick="reset('')">c</button>
+        <button type="clear" onclick="displayminus()">x</button>
+        <br>
+        <button type="number" onclick="display(7)">7</button>
+        <button type="number" onclick="display(8)">8</button>
+        <button type="number" onclick="display(9)">9</button>
+        <button type="number" onclick="display('/')">/</button>
+        <br>
+        <button type="number" onclick="display(4)">4</button>
+        <button type="number" onclick="display(5)">5</button>
+        <button type="number" onclick="display(6)">6</button>
+        <button type="number" onclick="display('*')">*</button>
+        <br>
+        <button type="number" onclick="display(1)">1</button>
+        <button type="number" onclick="display(2)">2</button>
+        <button type="number" onclick="display(3)">3</button>
+        <button type="number" onclick="display('-')">-</button>
+        <br>
+        <button type="number" onclick="display(0)">0</button>
+        <button type="number" onclick="display('.')">.</button>
+        <button type="number" onclick="display('+')">+</button>
+        <button type="number" onclick="calculate()">=</button>        
+    </div>
+</body>
+</html>
